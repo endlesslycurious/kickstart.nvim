@@ -1,3 +1,5 @@
+-- leader ct to toggle context view
+
 return {
   -- tree-sitter context, displays context at top of buffer
   'nvim-treesitter/nvim-treesitter-context',

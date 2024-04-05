@@ -1,3 +1,6 @@
+-- \\ to toggle terminal window, remeber to hit i to interact
+-- Setup normal window/buffer switch commands
+
 return {
   'akinsho/toggleterm.nvim',
   version = 'v2.*',

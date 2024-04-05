@@ -1,3 +1,6 @@
+-- :MRU to access then select file
+-- :MRU <pattern> then tab to search
+
 return {
   -- MRU command
   'yegappan/mru',
