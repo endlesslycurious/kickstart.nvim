@@ -1,3 +1,6 @@
+-- leader ee to toggle find file
+-- leader ef to open file tree at current file
+
 return {
   {
     'nvim-tree/nvim-tree.lua',
