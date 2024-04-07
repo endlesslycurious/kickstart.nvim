@@ -41,5 +41,43 @@ autocmd BufReadPost *
      \ endif
 ]]
 
+-- Use RipGrep for grep if available
+vim.cmd [[
+  if executable('rg')
+    set grepprg=rg\ -H\ --no-heading\ --vimgrep
+    set grepformat=%f:%l:%c:%m
+  endif
+]]
+
+-- toggle quick-fix window -- Stolen from https://github.com/milkypostman/vim-togglelist/blob/master/plugin/togglelist.vim
+vim.cmd [[
+  let g:toggle_list_copen_command = "copen 30"
+
+  function! s:GetBufferList() 
+    redir =>buflist 
+    silent! ls! 
+    redir END 
+    return buflist 
+  endfunction
+
+  function! ToggleQuickfixList()
+    for bufnum in map(filter(split(s:GetBufferList(), '\n'), 'v:val =~ "Quickfix List"'), 'str2nr(matchstr(v:val, "\\d\\+"))') 
+      if bufwinnr(bufnum) != -1
+        cclose
+        return
+      endif
+    endfor
+    let winnr = winnr()
+    exec(g:toggle_list_copen_command)
+    if winnr() != winnr
+      wincmd p
+    endif
+  endfunction
+]]
+vim.keymap.set('n', '<leader>qq', ':call ToggleQuickfixList()<CR>')
+vim.keymap.set('n', '<leader>q.', ':try | cnewer | catch | endtry<CR>')
+vim.keymap.set('n', '<leader>q,', ':try | colder | catch | endtry<CR>')
+vim.keymap.set('n', '<leader>qh', ':chistory<CR>')
+
 tab_bindings()
 return {}
