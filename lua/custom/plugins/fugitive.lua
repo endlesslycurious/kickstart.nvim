@@ -1,3 +1,4 @@
+-- Fugitive Git Client
 -- use :Git to access
 --   cc to commit
 --   dd to diff

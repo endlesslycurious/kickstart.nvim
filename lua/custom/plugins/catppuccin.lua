@@ -1,4 +1,5 @@
--- Configure Catppuccin theme in macchiato flavor, todo setup integraions
+-- Catppuccin Color Scheme
+-- Configure theme in macchiato flavor, todo setup integraions
 return {
   'catppuccin/nvim',
   name = 'catppuccin',
