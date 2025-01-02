@@ -664,6 +664,8 @@ require('lazy').setup({
         'golangci-lint', -- Go Linter
         'isort', -- Python import sorter
         'pylint', -- Python linter
+        'ansible-lint', -- Ansible linter
+        'hadolint', -- Docker linter
       })
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 

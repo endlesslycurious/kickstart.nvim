@@ -6,6 +6,8 @@ return {
     config = function()
       local lint = require 'lint'
       lint.linters_by_ft = {
+        ansible = { "ansible-lint" },
+        dockerfile = { "hadolint" },
         markdown = { 'markdownlint' },
         python = { 'pylint' },
       }
