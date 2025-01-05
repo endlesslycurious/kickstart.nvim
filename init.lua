@@ -657,15 +657,16 @@ require('lazy').setup({
       -- for you, so that they are available from within Neovim.
       local ensure_installed = vim.tbl_keys(servers or {})
       vim.list_extend(ensure_installed, {
-        'stylua', -- Used to format Lua code
+        'ansible-lint', -- Ansible linter
         'black', -- Python formatter
         'debugpy', -- Python Debugger
         'delve', -- Go debugger
         'golangci-lint', -- Go Linter
-        'isort', -- Python import sorter
-        'pylint', -- Python linter
-        'ansible-lint', -- Ansible linter
         'hadolint', -- Docker linter
+        'isort', -- Python import sorter
+        'markdownlint', -- Markdown linter
+        'pylint', -- Python linter
+        'stylua', -- Used to format Lua code
       })
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
