@@ -136,6 +136,16 @@ Mappings are grouped by plugin or functionality for clarity.
 
 ---
 
+### 🧠 Avante.nvim (AI Assistance)
+
+| Mode | Keybinding | Command | Description |
+|------|-------------|----------|--------------|
+| Normal | `<leader>a` | `:AvanteAsk` | Open or continue AI chat session |
+| Visual | `<leader>ae` | `:AvanteEdit` | Edit selected code with instructions from AI |
+| Normal | `<leader>as` | `:AvanteSuggest` | Request inline code suggestion or fix |
+
+---
+
 ## 🧱 Buffer & Tab Management
 
 | Key | Mode | Action |
