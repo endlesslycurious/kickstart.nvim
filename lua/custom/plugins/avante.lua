@@ -23,10 +23,10 @@ return {
       opts.provider = "openai"
       opts.providers.openai = {
         api_key = vim.env.OPENAI_API_KEY,
-        model = "gpt-5", -- change as needed
+        model = "gpt-4.1-mini", -- change as needed
         extra_request_body = {
-          temperature = 0.7,
-          max_completion_tokens = 2000,
+          temperature = 0.2,
+          max_completion_tokens = 512,
         }
       }
     else
