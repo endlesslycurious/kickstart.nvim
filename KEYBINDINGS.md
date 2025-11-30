@@ -2,199 +2,87 @@
 
 > **Leader key:** `<Space>`
 
-This file documents the key mappings configured in your Neovim setup, combining Kickstart’s latest defaults with your custom mappings.  
-Mappings are grouped by plugin or functionality for clarity.
+This file documents the key mappings configured in your Neovim setup, combining both default and plugin-specific mappings for clarity.
 
 ---
 
 ## 📦 General
 
-| Key | Mode | Action |
-|-----|------|---------|
-| `<leader>w` | Normal | Save current file (`:write`) |
-| `<leader>q` | Normal | Quit window (`:quit`) |
-| `<leader>Q` | Normal | Quit all (`:qa!`) |
-| `<Esc>` | Normal | Clear search highlight (`:nohlsearch`) |
-| `<C-h>` | Normal | Move to window left |
-| `<C-l>` | Normal | Move to window right |
-| `<C-j>` | Normal | Move to window below |
-| `<C-k>` | Normal | Move to window above |
-| `<leader>nh` | Normal | Clear highlights |
+(General key mappings will be appended in context if available.)
 
 ---
 
-## 🔍 Telescope
+## 🧩 Plugin: Avante.nvim
 
-| Key | Mode | Action |
-|-----|------|---------|
-| `<leader>sf` | Normal | Search files |
-| `<leader>sg` | Normal | Live grep across project |
-| `<leader>sb` | Normal | Search open buffers |
-| `<leader>sh` | Normal | Search help tags |
-| `<leader>sd` | Normal | Search diagnostics (new in Kickstart 2025) |
-| `<leader>sr` | Normal | Resume last Telescope search |
-| `<leader>sk` | Normal | Search keymaps |
-| `<leader>sc` | Normal | Search Neovim commands |
-| `<leader>ss` | Normal | Search current word (ripgrep) |
+| Key        | Mode   | Action                                    |
+|------------|--------|-------------------------------------------|
+| `<leader>a`  | Normal | AI: start / resume chat                   |
+| `<leader>ae` | Visual | AI: edit selection with instructions      |
+| `<leader>as` | Normal | AI: get inline suggestion / code suggestion |
 
 ---
 
-## ⚙️ LSP (Language Server Protocol)
+## 🐙 Plugin: Gitsigns.nvim
 
-| Key | Mode | Action |
-|-----|------|---------|
-| `gd` | Normal | Go to definition |
-| `gD` | Normal | Go to declaration |
-| `gr` | Normal | List references (Kickstart 0.11 default) |
-| `gI` | Normal | Go to implementation |
-| `<leader>rn` | Normal | Rename symbol (custom retained mapping) |
-| `<leader>ca` | Normal | Code action |
-| `<leader>f` | Normal | Format buffer using Conform (replaces LSP format) |
-| `<leader>ds` | Normal | Document symbols |
-| `<leader>ws` | Normal | Workspace symbols |
-| `<leader>e` | Normal | Show diagnostics (floating) |
-| `[d` | Normal | Go to previous diagnostic |
-| `]d` | Normal | Go to next diagnostic |
-| `<leader>dl` | Normal | List diagnostics (Telescope) |
-| `<leader>cl` | Normal | Restart LSP client |
-
----
-
-## 🧩 Treesitter
-
-| Key | Mode | Action |
-|-----|------|---------|
-| `:TSUpdate` | Command | Update all parsers |
-| `:TSInstall <lang>` | Command | Install a parser for a language |
-| `:TSEnable highlight` | Command | Enable syntax highlighting |
-| `:TSDisable highlight` | Command | Disable syntax highlighting |
+| Key           | Mode    | Action                              |
+|---------------|---------|-------------------------------------|
+| `]c`            | Normal  | Jump to next git change             |
+| `[c`            | Normal  | Jump to previous git change         |
+| `<leader>hs`    | Normal | Git: stage hunk                     |
+| `<leader>hr`    | Normal | Git: reset hunk                     |
+| `<leader>hS`    | Normal | Git: stage buffer                   |
+| `<leader>hu`    | Normal | Git: undo stage hunk                |
+| `<leader>hR`    | Normal | Git: reset buffer                   |
+| `<leader>hp`    | Normal | Git: preview hunk                   |
+| `<leader>hb`    | Normal | Git: blame line                     |
+| `<leader>hd`    | Normal | Git: diff against index             |
+| `<leader>hD`    | Normal | Git: diff against last commit       |
+| `<leader>tb`    | Normal | Toggle git blame line               |
+| `<leader>tD`    | Normal | Toggle git show deleted             |
 
 ---
 
-## 🧰 Git (via `lewis6991/gitsigns.nvim`)
+## 🐞 Plugin: Debug (nvim-dap)
 
-| Key | Mode | Action |
-|-----|------|---------|
-| `<leader>gb` | Normal | Show current line blame |
-| `<leader>gd` | Normal | Show diff (in split) |
-| `<leader>gp` | Normal | Preview hunk |
-| `<leader>gr` | Normal | Reset hunk |
-| `<leader>gs` | Normal | Stage hunk |
-| `<leader>gu` | Normal | Undo stage hunk |
-
----
-
-## 🗂️ File Tree (`neo-tree.nvim`)
-
-| Key | Mode | Action |
-|-----|------|---------|
-| `<leader>e` | Normal | Toggle Neo-tree |
-| `<leader>o` | Normal | Focus Neo-tree window |
-| `<leader>fe` | Normal | Open file explorer at current file |
+| Key           | Mode    | Action                            |
+|---------------|---------|-----------------------------------|
+| `<F5>`          | Normal  | Debug: Start/Continue             |
+| `<F1>`          | Normal  | Debug: Step Into                  |
+| `<F2>`          | Normal  | Debug: Step Over                  |
+| `<F3>`          | Normal  | Debug: Step Out                   |
+| `<leader>b`     | Normal  | Debug: Toggle Breakpoint          |
+| `<leader>B`     | Normal  | Debug: Set Breakpoint             |
+| `<F7>`          | Normal  | Debug: See last session result.   |
 
 ---
 
-## 💡 Snippets (`LuaSnip`)
+## 🔍 Plugin: Neotest
 
-| Key | Mode | Action |
-|-----|------|---------|
-| `<C-k>` | Insert | Expand snippet or jump forward |
-| `<C-j>` | Insert | Jump backward through snippet fields |
-| `<C-l>` | Insert | Cycle snippet choices |
-
----
-
-## 🧭 Navigation (`which-key`)
-
-| Key | Mode | Action |
-|-----|------|---------|
-| `<leader>` | Normal | Show which-key popup |
-| `<leader>?` | Normal | Show available keymaps for current buffer |
+| Key           | Mode    | Action                            |
+|---------------|---------|-----------------------------------|
+| `<leader>tn`    | Normal  | Run nearest test                  |
+| `<leader>tf`    | Normal  | Run file tests                    |
+| `<leader>ts`    | Normal  | Toggle summary window             |
+| `<leader>to`    | Normal  | Open test output                  |
 
 ---
 
-## 🧹 Formatting & Linting (`stevearc/conform.nvim`)
+## 📁 Plugin: Neo-tree
 
-| Key | Mode | Action |
-|-----|------|---------|
-| `<leader>f` | Normal | Format current buffer |
-| `<leader>F` | Normal | Format all buffers |
-| `:FormatInfo` | Command | Show formatter info |
+| Key      | Mode   | Action           |
+|----------|--------|------------------|
+| `\\`       | Normal | NeoTree reveal   |
 
 ---
 
-## 🧪 Testing (`nvim-neotest` / `neotest-golang`)
+## 🔧 Plugin: Fugitive
 
-| Key | Mode | Action |
-|-----|------|---------|
-| `<leader>tt` | Normal | Run nearest test |
-| `<leader>tf` | Normal | Run test file |
-| `<leader>to` | Normal | Open test output |
-| `<leader>ts` | Normal | Toggle test summary panel |
-| `<leader>td` | Normal | Debug nearest test |
-| `<leader>tS` | Normal | Stop running tests |
+- Usage: Use `:Git` to access Git functionality.
+  - `cc`: Commit
+  - `dd`: Diff
+  - `-`: Stage/Unstage
 
 ---
 
-### 🧠 Avante.nvim (AI Assistance)
+(Additional plugin key mappings can be appended here.)
 
-| Mode | Keybinding | Command | Description |
-|------|-------------|----------|--------------|
-| Normal | `<leader>a` | `:AvanteAsk` | Open or continue AI chat session |
-| Visual | `<leader>ae` | `:AvanteEdit` | Edit selected code with instructions from AI |
-| Normal | `<leader>as` | `:AvanteSuggest` | Request inline code suggestion or fix |
-
----
-
-## 🧱 Buffer & Tab Management
-
-| Key | Mode | Action |
-|-----|------|---------|
-| `<leader>bn` | Normal | Next buffer |
-| `<leader>bp` | Normal | Previous buffer |
-| `<leader>bd` | Normal | Close buffer |
-| `<leader>bo` | Normal | Close all other buffers |
-| `<leader>tn` | Normal | New tab |
-| `<leader>tc` | Normal | Close tab |
-| `<leader>to` | Normal | Close other tabs |
-
----
-
-## 🕹️ Miscellaneous Custom Mappings
-
-| Key | Mode | Action |
-|-----|------|---------|
-| `<leader>ss` | Normal | Search word under cursor |
-| `<leader>r` | Normal | Reload configuration |
-| `<leader>u` | Normal | Toggle Undotree |
-| `<leader>hl` | Normal | Toggle highlight groups |
-| `<leader>z` | Normal | Toggle Zen Mode (if installed) |
-
----
-
-## ⚙️ System Integrations
-
-| Key | Mode | Action |
-|-----|------|---------|
-| `<leader>t` | Normal | Open integrated terminal |
-| `<leader>x` | Normal | Close terminal split |
-| `<leader>y` | Visual | Copy to system clipboard |
-| `<leader>p` | Normal | Paste from system clipboard |
-| `<leader>P` | Normal | Paste without overwriting default register |
-
----
-
-### 📝 Notes
-
-- `<leader>` = `<Space>`  
-- `<C-*>` = Control key  
-- `<S-*>` = Shift key  
-- Some bindings are context-aware and may change depending on active LSP, filetype, or buffer.
-
----
-
-## 🔄 Last Sync
-
-- **Kickstart Base:** Upstream as of November 2025  
-- **Config Version:** `endlesslycurious/kickstart.nvim` (local custom build)
-- **Generated:** Automatically updated after Treesitter + LSP merge
