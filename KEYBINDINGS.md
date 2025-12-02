@@ -1,8 +1,9 @@
-# 🧭 Neovim Key Bindings Reference
+# 🧭 Neovim Key Bindings & Commands Reference
 
 > **Leader key:** `<Space>`
 
-This file documents the key mappings configured in your Neovim setup, combining both default and plugin-specific mappings for clarity.
+This file documents the key mappings configured in your Neovim setup,
+combining both default and plugin-specific mappings for clarity.
 
 ---
 
@@ -19,6 +20,12 @@ This file documents the key mappings configured in your Neovim setup, combining 
 | `<leader>a`  | Normal | AI: start / resume chat                   |
 | `<leader>ae` | Visual | AI: edit selection with instructions      |
 | `<leader>as` | Normal | AI: get inline suggestion / code suggestion |
+
+Useful command(s):
+
+- `:AvanteAsk` — start / resume chat
+- `:AvanteEdit` — edit selection
+- `:AvanteSuggest` — inline/code suggestion
 
 ---
 
@@ -65,6 +72,13 @@ This file documents the key mappings configured in your Neovim setup, combining 
 | `<leader>ts`    | Normal  | Toggle summary window             |
 | `<leader>to`    | Normal  | Open test output                  |
 
+Useful command(s):
+
+- `:lua require('neotest').run.run()` — run nearest test
+- `:lua require('neotest').run.run(vim.fn.expand('%'))` — run file
+- `:lua require('neotest').summary.toggle()` — toggle summary window
+- `:lua require('neotest').output.open()` — open test output
+
 ---
 
 ## 📁 Plugin: Neo-tree
@@ -82,7 +96,34 @@ This file documents the key mappings configured in your Neovim setup, combining 
   - `dd`: Diff
   - `-`: Stage/Unstage
 
+Useful command(s):
+
+- `:Git` — run git commands
+- `:Git status` — show status
+- `:Git blame` — blame current file
+
+---
+
+## 🧰 Plugin: MRU
+
+Useful command(s):
+
+- `:MRU` — open MRU dialog
+- `:MRU <pattern>` — search MRU entries
+
+---
+
+---
+
+## 🧭 Plugin: Telescope
+
+Useful command(s):
+
+- `:Telescope` — open Telescope
+- `:Telescope find_files` — find files
+- `:Telescope live_grep` — live grep
+- `:Telescope buffers` — list buffers
+
 ---
 
 (Additional plugin key mappings can be appended here.)
-
