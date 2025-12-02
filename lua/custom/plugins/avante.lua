@@ -1,4 +1,4 @@
-# Use Avante for LLM integration, use either Copilot or Chat-GPT depending on environment variables being defined
+# Use Avante for LLM integration, with Github Copilot.
 return {
   "yetone/avante.nvim",
   dependencies = {
@@ -8,27 +8,16 @@ return {
   build = "make",
   event = "VeryLazy",
   config = function()
-    -- Default provider: GitHub Copilot (via the Copilot plugin)
+    -- Configuration for Copilot as a provider only
     local opts = {
       provider = "copilot",
       providers = {
         copilot = {
-          -- model = "gpt-4.1",
-        },
+          -- Default model balancing cost and performance
+          model = "gpt-5-mini",
+        }
       },
     }
-
-    -- Optional: add OpenAI as a secondary provider when the env var is present
-    if vim.env.OPENAI_API_KEY then
-      opts.providers.openai = {
-        api_key = vim.env.OPENAI_API_KEY,
-        model = "gpt-4.1-mini",
-        extra_request_body = {
-          temperature = 0.2,
-          max_completion_tokens = 512,
-        },
-      }
-    end
 
     require("avante").setup(opts)
 
