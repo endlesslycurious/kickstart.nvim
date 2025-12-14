@@ -126,4 +126,23 @@ Useful command(s):
 
 ---
 
+## ⚡ Plugin: blink.cmp (Autocompletion)
+
+| Key                      | Mode   | Action                                                                 |
+|-------------------------:|:------:|------------------------------------------------------------------------|
+| `<C-y>`                  | Insert | Accept completion (default preset)                                     |
+| `<Tab>` / `<S-Tab>`      | Insert | Move to next/previous snippet placeholder or accept (preset dependent) |
+| `<C-Space>`              | Insert | Open completion menu or show docs if already open                      |
+| `<C-n>` / `<C-p>`        | Insert | Select next/previous completion                                        |
+| `<C-e>`                  | Insert | Close completion menu                                                   |
+| `<C-k>`                  | Insert | Toggle signature help                                                   |
+
+Notes:
+
+- The 'default' preset maps `<C-y>` to accept the completion. The 'super-tab' preset uses `<Tab>` to accept, and the 'enter' preset uses `<CR>`.
+- Presets also provide snippet navigation: `<Tab>`/`<S-Tab>` to jump through snippet placeholders when using LuaSnip.
+- Blink.cmp supports multiple sources (copilot, lsp, path, snippets, lazydev). See your blink.cmp configuration in lua/custom/plugins for the active preset and further customization.
+
+---
+
 (Additional plugin key mappings can be appended here.)
