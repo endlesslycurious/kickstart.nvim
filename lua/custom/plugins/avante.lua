@@ -4,6 +4,7 @@ return {
   dependencies = {
     "nvim-lua/plenary.nvim",
     "MunifTanjim/nui.nvim",
+    "zbirenbaum/copilot.lua", -- provider dependency
   },
   build = "make",
   event = "VeryLazy",

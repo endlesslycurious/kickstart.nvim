@@ -1,18 +1,15 @@
-# Configure copilot for use in NeoVim
+# Configure copilot for use in NeoVim, but disable its own UI features in favor of using blink.cmp
 return {
   {
     "zbirenbaum/copilot.lua",
-    lazy = false,              -- ← force load at startup
+    event = "InsertEnter",
     config = function()
       require("copilot").setup({
         panel = {
-          enabled = true,
-          auto_refresh = false,
+          enabled = false,
         },
         suggestion = {
-          enabled = true,
-          auto_trigger = true,
-          debounce = 75,
+          enabled = false,
         },
       })
     end,
