@@ -1,14 +1,10 @@
 -- Catppuccin Color Scheme
--- Configure theme in macchiato flavor, todo setup integraions
-return {
-  'catppuccin/nvim',
-  name = 'catppuccin',
+-- Configure theme in macchiato flavor
 
-  config = function()
-    require('catppuccin').setup {
-      flavour = 'macchiato',
-    }
+vim.pack.add { 'https://github.com/catppuccin/nvim' }
 
-    vim.cmd.colorscheme 'catppuccin'
-  end,
+require('catppuccin').setup {
+    flavour = 'macchiato',
 }
+
+vim.cmd.colorscheme 'catppuccin'

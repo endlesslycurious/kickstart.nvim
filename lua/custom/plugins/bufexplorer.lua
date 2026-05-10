@@ -1,6 +1,4 @@
 -- Buffer Explorer plugin
 -- <leader>be - enter buffer explorer
 
-return {
-  'jlanzarotta/bufexplorer',
-}
+vim.pack.add { 'https://github.com/jlanzarotta/bufexplorer' }

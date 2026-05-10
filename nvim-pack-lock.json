@@ -1,5 +1,9 @@
 {
   "plugins": {
+    "FixCursorHold.nvim": {
+      "rev": "1900f89dc17c603eec29960f57c00bd9ae696495",
+      "src": "https://github.com/antoinemadec/FixCursorHold.nvim"
+    },
     "LuaSnip": {
       "rev": "642b0c595e11608b4c18219e93b88d7637af27bc",
       "src": "https://github.com/L3MON4D3/LuaSnip",
@@ -9,6 +13,10 @@
       "rev": "78336bc89ee5365633bcf754d93df01678b5c08f",
       "src": "https://github.com/saghen/blink.cmp",
       "version": "1.0.0 - 2.0.0"
+    },
+    "bufexplorer": {
+      "rev": "77d7aa8dd388a777a547410023927c78762c5060",
+      "src": "https://github.com/jlanzarotta/bufexplorer"
     },
     "conform.nvim": {
       "rev": "dca1a190aa85f9065979ef35802fb77131911106",
@@ -50,14 +58,34 @@
       "rev": "a5fda91040763cf9ad70bdce1c656b0f4ba1d16e",
       "src": "https://github.com/nvim-mini/mini.nvim"
     },
+    "mru": {
+      "rev": "dcba22de1201523acda1e1a60d6fc3d9d7b6a519",
+      "src": "https://github.com/yegappan/mru"
+    },
     "neo-tree.nvim": {
       "rev": "84c75e7a7e443586f60508d12fc50f90d9aee14e",
       "src": "https://github.com/nvim-neo-tree/neo-tree.nvim",
       "version": ">=0.0.0"
     },
+    "neotest": {
+      "rev": "ad991822b7076b1d940b33a9d6d0d30416d5df81",
+      "src": "https://github.com/nvim-neotest/neotest"
+    },
+    "neotest-golang": {
+      "rev": "84c1f3be59f85a2f5bbb9290040077bc8a68a00c",
+      "src": "https://github.com/fredrikaverpil/neotest-golang"
+    },
+    "neotest-python": {
+      "rev": "e6df4f1892f6137f58135917db24d1655937d831",
+      "src": "https://github.com/nvim-neotest/neotest-python"
+    },
     "nui.nvim": {
       "rev": "de740991c12411b663994b2860f1a4fd0937c130",
       "src": "https://github.com/MunifTanjim/nui.nvim"
+    },
+    "nvim": {
+      "rev": "426dbebe06b5c69fd846ceb17b42e12f890aedf1",
+      "src": "https://github.com/catppuccin/nvim"
     },
     "nvim-autopairs": {
       "rev": "7b9923abad60b903ece7c52940e1321d39eccc79",
@@ -100,6 +128,10 @@
       "rev": "74b06c6c75e4eeb3108ec01852001636d85a932b",
       "src": "https://github.com/nvim-lua/plenary.nvim"
     },
+    "rainbow-delimiters.nvim": {
+      "rev": "08783ec022e7ddefe0f12a16f1ac4968f55478b0",
+      "src": "https://github.com/HiPhish/rainbow-delimiters.nvim"
+    },
     "telescope-fzf-native.nvim": {
       "rev": "b25b749b9db64d375d782094e2b9dce53ad53a40",
       "src": "https://github.com/nvim-telescope/telescope-fzf-native.nvim"
@@ -119,6 +151,14 @@
     "tokyonight.nvim": {
       "rev": "cdc07ac78467a233fd62c493de29a17e0cf2b2b6",
       "src": "https://github.com/folke/tokyonight.nvim"
+    },
+    "vim-fugitive": {
+      "rev": "3b753cf8c6a4dcde6edee8827d464ba9b8c4a6f0",
+      "src": "https://github.com/tpope/vim-fugitive"
+    },
+    "vim-vinegar": {
+      "rev": "bb1bcddf43cfebe05eb565a84ab069b357d0b3d6",
+      "src": "https://github.com/tpope/vim-vinegar"
     },
     "which-key.nvim": {
       "rev": "3aab2147e74890957785941f0c1ad87d0a44c15a",

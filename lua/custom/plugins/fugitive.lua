@@ -4,7 +4,4 @@
 --   dd to diff
 --   - to stage/unstage
 
-return {
-  -- dope Git plugin
-  'tpope/vim-fugitive',
-}
+vim.pack.add { 'https://github.com/tpope/vim-fugitive' }

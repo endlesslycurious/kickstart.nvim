@@ -1,4 +1,2 @@
 -- Rainbow delimiters (brackets) plugin
-return {
-  'HiPhish/rainbow-delimiters.nvim',
-}
+vim.pack.add { 'https://github.com/HiPhish/rainbow-delimiters.nvim' }
