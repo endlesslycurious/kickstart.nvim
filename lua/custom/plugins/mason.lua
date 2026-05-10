@@ -3,6 +3,7 @@
 local tools = {
     'ansible-lint',         -- Ansible linter
     'black',                -- Python formatter
+    'buf',                  -- Protobuf formatter & linter
     'clangd',               -- C++ language server
     'debugpy',              -- Python debugger
     'delve',                -- Go debugger
@@ -12,9 +13,10 @@ local tools = {
     'isort',                -- Python import sorter
     'jedi-language-server', -- Python language server
     'lua-language-server',  -- Lua lanugage server
-    'markdownlint',         -- Markdown linter
     'pylint',               -- Python linter
+    'rumdl',                -- Markdown linter
     'stylua',               -- Lua formatter
+    'yamllint',             -- YAML linter
 }
 
 local ok, installer = pcall(require, 'mason-tool-installer')
