@@ -188,7 +188,7 @@ do
         underline = { severity = { min = vim.diagnostic.severity.WARN } },
 
         -- Can switch between these as you prefer
-        virtual_text = true, -- Text shows up at the end of the line
+        virtual_text = true,   -- Text shows up at the end of the line
         virtual_lines = false, -- Text shows up underneath the line, with virtual lines
 
         -- Auto open the float, so you can easily read the errors when jumping with `[d` and `]d`
@@ -300,8 +300,10 @@ do
             end
 
             if name == 'LuaSnip' then
-                if vim.fn.has 'win32' ~= 1 and vim.fn.executable 'make' == 1 then run_build(name,
-                        { 'make', 'install_jsregexp' }, ev.data.path) end
+                if vim.fn.has 'win32' ~= 1 and vim.fn.executable 'make' == 1 then
+                    run_build(name,
+                        { 'make', 'install_jsregexp' }, ev.data.path)
+                end
                 return
             end
 
@@ -702,8 +704,6 @@ do
         -- But for many setups, the LSP (`ts_ls`) will work just fine
         -- ts_ls = {},
 
-        stylua = {}, -- Used to format Lua code
-
         -- Special Lua Config, as recommended by neovim help docs
         lua_ls = {
             on_init = function(client)
@@ -758,7 +758,7 @@ do
     -- You can press `g?` for help in this menu.
     local ensure_installed = vim.tbl_keys(servers or {})
     vim.list_extend(ensure_installed, {
-        -- You can add other tools here that you want Mason to install
+        'stylua', -- Used to format Lua code
     })
 
     require('mason-tool-installer').setup { ensure_installed = ensure_installed }
