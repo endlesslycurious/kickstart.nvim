@@ -1,113 +1,117 @@
 # 🧭 Neovim Key Bindings & Commands Reference
 
 > **Leader key:** `<Space>`
-
-This file documents the key mappings configured in your Neovim setup,
-combining both default and plugin-specific mappings for clarity.
+>
+> **which-key:** Configured with zero delay — it appears automatically whenever you pause after pressing a key that has sub-mappings (e.g. `<leader>`, `gr`, `<leader>h`, `<leader>s`, `<leader>t`). There is no separate key to trigger it manually.
 
 ---
 
 ## 📦 General
 
-(General key mappings will be appended in context if available.)
+| Key              | Mode   | Action                                      |
+|------------------|--------|---------------------------------------------|
+| `<Esc>`          | Normal | Clear search highlights                     |
+| `<leader>q`      | Normal | Open diagnostic quickfix list               |
+| `<Esc><Esc>`     | Terminal | Exit terminal mode                        |
+| `<C-h>`          | Normal | Move focus to the left window               |
+| `<C-l>`          | Normal | Move focus to the right window              |
+| `<C-j>`          | Normal | Move focus to the lower window              |
+| `<C-k>`          | Normal | Move focus to the upper window              |
 
 ---
 
-## 🧩 Plugin: Avante.nvim
-
-| Key          | Mode   | Action                                   |
-|--------------|--------|------------------------------------------|
-| `<leader>a`  | Normal | AI: start / resume chat                  |
-| `<leader>ae` | Visual | AI: edit selection with instructions     |
-| `<leader>as` | Normal | AI: get inline suggestion / code         |
-
-Useful command(s):
-
-- `:AvanteAsk` — start / resume chat
-- `:AvanteEdit` — edit selection
-- `:AvanteSuggest` — inline / code suggestion
-
----
 
 ## ⚡ Plugin: blink.cmp (Autocompletion)
 
-| Key                 | Mode   | Action                                |
-|--------------------:|:------:|--------------------------------------|
-| `<C-y>`             | Insert | Accept completion (default)           |
-| `<Tab>` / `<S-Tab>` | Insert | Next/prev snippet placeholder or      |
-|                     |        | accept                                |
-| `<C-Space>`         | Insert | Open completion menu or show docs    |
-| `<C-n>` / `<C-p>`   | Insert | Select next/previous completion      |
-| `<C-e>`             | Insert | Close completion menu                |
-| `<C-k>`             | Insert | Toggle signature help                |
-
-Notes:
-
-- The 'default' preset maps `<C-y>` to accept completion.
-  The 'super-tab' preset maps `<Tab>` for accept. The 'enter'
-  preset maps `<CR>` for accept.
-
-- Presets provide snippet navigation. Use `<Tab>` / `<S-Tab>`
-  to jump through snippet placeholders when using LuaSnip.
-
-- Blink.cmp supports multiple sources: copilot, lsp, path,
-  snippets and lazydev. See `lua/custom/plugins` for the
-  active preset and further customization.
+| Key                   | Mode   | Action                              |
+|-----------------------|--------|-------------------------------------|
+| `<C-y>`               | Insert | Accept completion                   |
+| `<Tab>` / `<S-Tab>`   | Insert | Next / prev snippet placeholder     |
+| `<C-Space>`           | Insert | Open completion menu or show docs   |
+| `<C-n>` / `<C-p>`     | Insert | Select next / previous completion   |
+| `<C-e>`               | Insert | Close completion menu               |
+| `<C-k>`               | Insert | Toggle signature help               |
 
 ---
 
 ## 🐞 Plugin: Debug (nvim-dap)
 
-| Key     | Mode   | Action                        |
-|---------|--------|-------------------------------|
-| `<F5>`  | Normal | Debug: Start / Continue       |
-| `<F1>`  | Normal | Debug: Step Into              |
-| `<F2>`  | Normal | Debug: Step Over              |
-| `<F3>`  | Normal | Debug: Step Out               |
-| `<leader>b` | Normal | Debug: Toggle Breakpoint  |
-| `<leader>B` | Normal | Debug: Set Breakpoint     |
-| `<F7>`  | Normal | Debug: See last session       |
+| Key              | Mode   | Action                          |
+|------------------|--------|---------------------------------|
+| `<F5>`           | Normal | Debug: Start / Continue         |
+| `<F1>`           | Normal | Debug: Step Into                |
+| `<F2>`           | Normal | Debug: Step Over                |
+| `<F3>`           | Normal | Debug: Step Out                 |
+| `<F7>`           | Normal | Debug: See last session result  |
+| `<leader>b`      | Normal | Debug: Toggle Breakpoint        |
+| `<leader>B`      | Normal | Debug: Set Breakpoint condition |
 
 ---
 
 ## 🔧 Plugin: Fugitive
 
-- Usage: Use `:Git` to access Git functionality.
-  - `cc`: Commit
-  - `dd`: Diff
-  - `-`: Stage / Unstage
+| Key | Mode | Action |
+|-----|------|--------|
+| (No key bindings — use `:Git` commands) | | |
 
-Useful command(s):
+Useful commands:
 
 - `:Git` — run git commands
 - `:Git status` — show status
 - `:Git blame` — blame current file
+- In the Fugitive buffer: `cc` to commit, `dd` to diff, `-` to stage/unstage
 
 ---
 
 ## 🐙 Plugin: Gitsigns.nvim
 
-| Key           | Mode   | Action                         |
-|---------------|--------|--------------------------------|
-| `]c`          | Normal | Jump to next git change        |
-| `[c`          | Normal | Jump to previous git change    |
-| `<leader>hs`  | Normal | Git: stage hunk                |
-| `<leader>hr`  | Normal | Git: reset hunk                |
-| `<leader>hS`  | Normal | Git: stage buffer              |
-| `<leader>hu`  | Normal | Git: undo stage hunk           |
-| `<leader>hR`  | Normal | Git: reset buffer              |
-| `<leader>hp`  | Normal | Git: preview hunk              |
-| `<leader>hb`  | Normal | Git: blame line                |
-| `<leader>hd`  | Normal | Git: diff against index        |
-| `<leader>hD`  | Normal | Git: diff against last commit  |
-| `<leader>tb`  | Normal | Toggle git blame line          |
-| `<leader>tD`  | Normal | Toggle git show deleted        |
+| Key            | Mode          | Action                                        |
+|----------------|---------------|-----------------------------------------------|
+| `]c`           | Normal        | Jump to next git change                       |
+| `[c`           | Normal        | Jump to previous git change                   |
+| `<leader>hs`   | Normal/Visual | Git: stage hunk                               |
+| `<leader>hr`   | Normal/Visual | Git: reset hunk                               |
+| `<leader>hS`   | Normal        | Git: stage buffer                             |
+| `<leader>hR`   | Normal        | Git: reset buffer                             |
+| `<leader>hp`   | Normal        | Git: preview hunk                             |
+| `<leader>hi`   | Normal        | Git: preview hunk inline                      |
+| `<leader>hb`   | Normal        | Git: blame line (full)                        |
+| `<leader>hd`   | Normal        | Git: diff against index                       |
+| `<leader>hD`   | Normal        | Git: diff against last commit                 |
+| `<leader>hq`   | Normal        | Git: hunk quickfix list (current file)        |
+| `<leader>hQ`   | Normal        | Git: hunk quickfix list (all files in repo)   |
+| `<leader>tb`   | Normal        | Toggle git blame line                         |
+| `<leader>tw`   | Normal        | Toggle git intra-line word diff               |
+| `ih`           | Object/Visual | Select hunk (text object)                     |
+
+---
+
+## 🔍 Plugin: LSP
+
+These keymaps are active when an LSP server is attached to the buffer.
+
+| Key        | Mode          | Action                              |
+|------------|---------------|-------------------------------------|
+| `grn`      | Normal        | Rename symbol under cursor          |
+| `gra`      | Normal/Visual | Code action                         |
+| `grD`      | Normal        | Go to declaration                   |
+| `grr`      | Normal        | Go to references (Telescope)        |
+| `gri`      | Normal        | Go to implementation (Telescope)    |
+| `grd`      | Normal        | Go to definition (Telescope)        |
+| `grt`      | Normal        | Go to type definition (Telescope)   |
+| `gO`       | Normal        | Open document symbols (Telescope)   |
+| `gW`       | Normal        | Open workspace symbols (Telescope)  |
+| `<leader>th` | Normal      | Toggle inlay hints                  |
 
 ---
 
 ## 🧰 Plugin: MRU
 
-Useful command(s):
+| Key | Mode | Action |
+|-----|------|--------|
+| (No key bindings — use `:MRU` commands) | | |
+
+Useful commands:
 
 - `:MRU` — open MRU dialog
 - `:MRU <pattern>` — search MRU entries
@@ -116,40 +120,46 @@ Useful command(s):
 
 ## 📁 Plugin: Neo-tree
 
-| Key   | Mode   | Action         |
-|-------|--------|----------------|
-| `\\`  | Normal | NeoTree reveal |
+| Key  | Mode   | Action         |
+|------|--------|----------------|
+| `\\` | Normal | NeoTree reveal |
 
 ---
 
-## 🔍 Plugin: Neotest
+## 🔬 Plugin: Neotest
 
-| Key             | Mode   | Action                 |
-|-----------------|--------|------------------------|
-| `<leader>tn`    | Normal | Run nearest test       |
-| `<leader>tf`    | Normal | Run file tests         |
-| `<leader>ts`    | Normal | Toggle summary window  |
-| `<leader>to`    | Normal | Open test output       |
-
-Useful command(s):
-
-- `:lua require('neotest').run.run()` — run nearest test
-- `:lua require('neotest').run.run(vim.fn.expand('%'))` — run file
-- `:lua require('neotest').summary.toggle()` — toggle summary
-  window
-- `:lua require('neotest').output.open()` — open test output
+| Key           | Mode   | Action                 |
+|---------------|--------|------------------------|
+| `<leader>tn`  | Normal | Run nearest test       |
+| `<leader>tf`  | Normal | Run file tests         |
+| `<leader>ts`  | Normal | Toggle summary window  |
+| `<leader>to`  | Normal | Open test output       |
 
 ---
 
-## 🧭 Plugin: Telescope
+## 🔭 Plugin: Telescope
 
-Useful command(s):
-
-- `:Telescope` — open Telescope
-- `:Telescope find_files` — find files
-- `:Telescope live_grep` — live grep
-- `:Telescope buffers` — list buffers
+| Key            | Mode          | Action                                     |
+|----------------|---------------|--------------------------------------------|
+| `<leader>sh`   | Normal        | Search help tags                           |
+| `<leader>sk`   | Normal        | Search keymaps                             |
+| `<leader>sf`   | Normal        | Search files                               |
+| `<leader>ss`   | Normal        | Search / select Telescope pickers          |
+| `<leader>sw`   | Normal/Visual | Search current word                        |
+| `<leader>sg`   | Normal        | Search by grep (live grep)                 |
+| `<leader>sd`   | Normal        | Search diagnostics                         |
+| `<leader>sr`   | Normal        | Search resume (reopen last search)         |
+| `<leader>s.`   | Normal        | Search recent files                        |
+| `<leader>sc`   | Normal        | Search commands                            |
+| `<leader>sn`   | Normal        | Search Neovim config files                 |
+| `<leader>/`    | Normal        | Fuzzy search in current buffer             |
+| `<leader>s/`   | Normal        | Live grep across open files                |
+| `<leader><leader>` | Normal   | Find existing buffers                      |
 
 ---
 
-(Additional plugin key mappings can be appended here.)
+## 🎨 Plugin: Conform (Formatting)
+
+| Key         | Mode          | Action         |
+|-------------|---------------|----------------|
+| `<leader>f` | Normal/Visual | Format buffer  |
