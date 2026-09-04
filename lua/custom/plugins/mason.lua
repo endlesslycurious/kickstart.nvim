@@ -12,7 +12,7 @@ local tools = {
     'jedi-language-server', -- Python language server
     'lua-language-server',  -- Lua lanugage server
     'ruff',                 -- Python linter & formatter
-    'rumdl',                -- Markdown linter
+    'rumdl',                -- Markdown linter (Rust, no Node.js needed)
     'stylua',               -- Lua formatter
     'yamllint',             -- YAML linter
 }

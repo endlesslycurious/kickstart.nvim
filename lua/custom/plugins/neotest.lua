@@ -21,7 +21,8 @@ require('neotest').setup {
                 '-v',
                 '-race',
                 '-count=1',
-                '-coverprofile=' .. vim.fn.getcwd() .. '/coverage.out',
+                -- Write coverage to a temp file instead of polluting the repo root
+                '-coverprofile=' .. vim.fn.tempname(),
             },
         },
     },
