@@ -7,7 +7,7 @@ lint.linters_by_ft = {
     ansible = { 'ansible-lint' },
     dockerfile = { 'hadolint' },
     markdown = { 'markdownlint' },
-    python = { 'pylint' },
+    python = { 'ruff' },
 }
 
 -- To allow other plugins to add linters to require('lint').linters_by_ft,

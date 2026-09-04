@@ -2,7 +2,6 @@
 
 local tools = {
     'ansible-lint',         -- Ansible linter
-    'black',                -- Python formatter
     'buf',                  -- Protobuf formatter & linter
     'clangd',               -- C++ language server
     'debugpy',              -- Python debugger
@@ -10,10 +9,9 @@ local tools = {
     'golangci-lint',        -- Go linter
     'gopls',                -- Go language server
     'hadolint',             -- Docker linter
-    'isort',                -- Python import sorter
     'jedi-language-server', -- Python language server
     'lua-language-server',  -- Lua lanugage server
-    'pylint',               -- Python linter
+    'ruff',                 -- Python linter & formatter
     'rumdl',                -- Markdown linter
     'stylua',               -- Lua formatter
     'yamllint',             -- YAML linter
