@@ -15,12 +15,17 @@ The main programming languages I use are the following:
 At times I will also interact with the following file formats:
 
 - Batch script
+- Docker
+- JSON
+- Kubernetes Helm
 - Lua
 - Markdown
 - Shell script
 - SQL
 - Swift
 - Terraform
+- XML
+- YAML
 
 ## Kickstart divergences & additions
 
