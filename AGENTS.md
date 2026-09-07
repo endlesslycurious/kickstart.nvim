@@ -33,6 +33,7 @@ Limit modifications or divergences to the kickstart supplied files to simplify u
 
 - New configuration goes in `lua/custom/plugins/*.lua`.
 - Only list additions (e.g. adding a language/parser/tool) may go in kickstart files.
+- Comment out rather than deleting kickstart items from lists.
 
 ## Guidelines
 

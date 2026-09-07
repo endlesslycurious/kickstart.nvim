@@ -6,7 +6,7 @@ local lint = require 'lint'
 lint.linters_by_ft = {
     ansible = { 'ansible-lint' },
     dockerfile = { 'hadolint' },
-    markdown = { 'markdownlint' },
+    -- markdown = { 'markdownlint' }, -- overridden to 'rumdl' in lua/custom/plugins/lint.lua (no Node.js)
     python = { 'ruff' },
 }
 

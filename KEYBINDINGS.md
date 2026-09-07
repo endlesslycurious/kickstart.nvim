@@ -105,19 +105,6 @@ These keymaps are active when an LSP server is attached to the buffer.
 
 ---
 
-## 🧰 Plugin: MRU
-
-| Key | Mode | Action |
-|-----|------|--------|
-| (No key bindings — use `:MRU` commands) | | |
-
-Useful commands:
-
-- `:MRU` — open MRU dialog
-- `:MRU <pattern>` — search MRU entries
-
----
-
 ## 📁 Plugin: Neo-tree
 
 | Key  | Mode   | Action         |

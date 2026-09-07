@@ -14,10 +14,6 @@
       "src": "https://github.com/saghen/blink.cmp",
       "version": "1.0.0 - 2.0.0"
     },
-    "bufexplorer": {
-      "rev": "77d7aa8dd388a777a547410023927c78762c5060",
-      "src": "https://github.com/jlanzarotta/bufexplorer"
-    },
     "conform.nvim": {
       "rev": "dca1a190aa85f9065979ef35802fb77131911106",
       "src": "https://github.com/stevearc/conform.nvim"
